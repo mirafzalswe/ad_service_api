@@ -10,6 +10,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 
+
 class AdDetail(generics.RetrieveAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdSerializer
