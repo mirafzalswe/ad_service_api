@@ -9,6 +9,8 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
+# from get_date import handle
+
 
 
 class AdDetail(generics.RetrieveAPIView):
@@ -30,4 +32,3 @@ def create_user(request):
     user = User.objects.create_user(username=username, password=password)
     token = Token.objects.create(user=user)
     return Response({'user_id': user.id, 'username': user.username, 'token': token.key}, status=201)
-
