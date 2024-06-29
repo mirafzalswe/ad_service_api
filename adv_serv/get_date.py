@@ -38,9 +38,7 @@ import os
 from ad_service import settings
 
 def get_from_file():
-
     file_path = os.path.join(settings.BASE_DIR, 'adv_serv', 'parsing/result3.html')
-
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             html_content = file.read()
